@@ -1,0 +1,34 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "Um teste de backend",
+      "autoria": "Expert Full Stack",
+      "modelo": "modelo2"
+    },
+    {
+      "id": 2,
+      "conteudo": "Um teste de backend 2",
+      "autoria": "Expert Full Stack",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 3,
+      "conteudo": "Um teste de backend 3",
+      "autoria": "Expert Full Stack",
+      "modelo": "modelo3"
+    },
+    {
+      "conteudo": "Agora funciona o modelo",
+      "autoria": "Será que foi isso, o value?",
+      "modelo": "modelo2",
+      "id": 11
+    },
+    {
+      "conteudo": "Delimitar sempre o value dentro do input do radio",
+      "autoria": "Funcionou!",
+      "modelo": "modelo1",
+      "id": 12
+    }
+  ]
+}
