@@ -1,23 +1,23 @@
 <section class="container criar-pensamentos ff-inter">
 <header class="header">
-    <h2>Adicione uma <br>ideia nova:</h2>
+    <h2>Adicione uma <br>ideia nova</h2>
 </header>
-<form>
-    <label for="pensamento">Ideia</label>
+<form [formGroup]="form">
+    <label for="pensamento">Elabore uma ideia:</label>
         <input type="textarea" 
-        name="pensamento" 
+        formControlName="conteudo" 
         id="pensamento"
         class="input"
-        placeholder="Qual que é a fita?"
-        [(ngModel)]="pensamento.conteudo">
+        placeholder="Digite uma ideia"
+        >
         
-    <label for="autoria">Onde quer chegar com isso</label>
+    <label for="autoria">Defina um objetivo:</label>
         <input type="text" 
-        name="autoria" 
+        formControlName="objetivo" 
         id="autoria"
         class="input"
-        placeholder="Delimite até o inexplicável"
-        [(ngModel)]="pensamento.autoria">    
+        placeholder="Digite o objetivo"
+        >    
     <label for="modelo">Selecione o modelo do card:</label>
         <div class="container-radio">
             <div class="radio-modelo">
@@ -25,8 +25,8 @@
                     <input type="radio"
                     id="modelo1"
                     value="modelo1"
-                    name="modelo-card"
-                    [(ngModel)]="pensamento.modelo">                 
+                    formControlName="modelo"
+                    >                 
                     <div class="custom-radio">
                         <span></span>
                     </div>
@@ -35,8 +35,8 @@
                 Prévia:
                 <div class="modelo modelo1 ff-roboto-mono">
                     <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
-                    <p class="conteudo">{{pensamento.conteudo}}</p>
-                    <p class="definicao"><b>{{pensamento.autoria}}</b></p>
+                    <p class="conteudo">{{ form.get('conteudo')?.value}}</p>
+                    <p class="definicao"><b>{{ form.get('objetivo')?.value}}</b></p>
                 </div>
             </div>
             <div class="radio-modelo">
@@ -44,8 +44,8 @@
                 <input type="radio"
                 id="modelo2"
                 value="modelo2"
-                name="modelo-card"
-                [(ngModel)]="pensamento.modelo">  
+                formControlName="modelo"
+                >  
                 
                 <div class="custom-radio">
                     <span></span>
@@ -55,8 +55,8 @@
                 Prévia:
                 <div class="modelo modelo2 ff-roboto-mono">
                     <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul claro">
-                    <p class="conteudo">{{pensamento.conteudo}}</p>
-                    <p class="definicao"><b>{{pensamento.autoria}}</b></p>
+                    <p class="conteudo">{{ form.get('conteudo')?.value}}</p>
+                    <p class="definicao"><b>{{ form.get('objetivo')?.value}}</b></p>
                 </div>
             </div>
             <div class="radio-modelo">
@@ -64,8 +64,8 @@
                 <input type="radio"
                 id="modelo3"
                 value="modelo3"
-                name="modelo-card"
-                [(ngModel)]="pensamento.modelo">              
+                formControlName="modelo"
+                >              
                 <div class="custom-radio">
                     <span></span>
                 </div>
@@ -74,8 +74,8 @@
                 Prévia:
                 <div class="modelo modelo3 ff-roboto-mono">
                     <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
-                    <p class="conteudo">{{pensamento.conteudo}}</p>
-                    <p class="definicao"><b>{{pensamento.autoria}}</b></p>
+                    <p class="conteudo">{{ form.get('conteudo')?.value}}</p>
+                    <p class="definicao"><b>{{ form.get('objetivo')?.value}}</b></p>
                 </div>
             </div>
         </div>
